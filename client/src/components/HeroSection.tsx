@@ -1,4 +1,4 @@
-import { Download, Rocket } from "lucide-react";
+import { Download, Rocket, ChevronDown } from "lucide-react";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 export default function HeroSection() {
@@ -6,6 +6,13 @@ export default function HeroSection() {
 
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -61,10 +68,20 @@ export default function HeroSection() {
       
       {/* Animated Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center text-muted-foreground">
-          <span className="font-mono text-sm mb-2">scroll.down()</span>
-          <div className="w-px h-8 bg-primary animate-pulse"></div>
-        </div>
+        <button 
+          onClick={scrollToAbout}
+          className="flex flex-col items-center text-muted-foreground hover:text-primary transition-all duration-300 group cursor-pointer"
+        >
+          <span className="font-mono text-sm mb-3 group-hover:text-primary transition-colors">scroll.down()</span>
+          <div className="relative">
+            <div className="w-10 h-10 rounded-full border-2 border-primary/50 group-hover:border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,245,255,0.5)] group-hover:bg-primary/10">
+              <ChevronDown 
+                className="w-5 h-5 text-primary animate-bounce group-hover:scale-110 transition-transform" 
+              />
+            </div>
+            <div className="absolute inset-0 rounded-full border-2 border-secondary/30 animate-ping opacity-75"></div>
+          </div>
+        </button>
       </div>
     </section>
   );
