@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Code, Server, Gavel, Database } from "lucide-react";
+import { Code, Server, Gavel, Database, Globe, GitBranch, Palette, Cpu, Cloud, Container, Box, Smartphone } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const skillCategories = [
@@ -38,14 +38,18 @@ const skillCategories = [
 ];
 
 const techIcons = [
-  { name: "React", icon: "fab fa-react", color: "primary" },
-  { name: "Python", icon: "fab fa-python", color: "secondary" },
-  { name: "Node.js", icon: "fab fa-node-js", color: "accent" },
-  { name: "Docker", icon: "fab fa-docker", color: "primary" },
-  { name: "AWS", icon: "fab fa-aws", color: "secondary" },
-  { name: "Git", icon: "fab fa-git-alt", color: "accent" },
-  { name: "Figma", icon: "fab fa-figma", color: "primary" },
-  { name: "Database", icon: "fas fa-database", color: "secondary" },
+  { name: "React", icon: Code, color: "primary" },
+  { name: "Python", icon: Cpu, color: "secondary" },
+  { name: "Node.js", icon: Server, color: "accent" },
+  { name: "Docker", icon: Container, color: "primary" },
+  { name: "AWS", icon: Cloud, color: "secondary" },
+  { name: "Git", icon: GitBranch, color: "accent" },
+  { name: "Figma", icon: Palette, color: "primary" },
+  { name: "Database", icon: Database, color: "secondary" },
+  { name: "TypeScript", icon: Box, color: "accent" },
+  { name: "Mobile", icon: Smartphone, color: "primary" },
+  { name: "Web", icon: Globe, color: "secondary" },
+  { name: "DevOps", icon: Gavel, color: "accent" },
 ];
 
 export default function SkillsSection() {
@@ -98,14 +102,42 @@ export default function SkillsSection() {
               my_tech_stack = [
             </h3>
             
-            <div className="grid grid-cols-4 md:grid-cols-8 gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 items-center justify-items-center">
               {techIcons.map((tech, index) => (
                 <div 
                   key={tech.name}
-                  className={`tech-icon group cursor-pointer transition-all duration-300 hover:scale-110 hover:text-${tech.color}`}
+                  className="tech-icon group cursor-pointer transition-all duration-500 hover:scale-125 hover:rotate-6 transform-gpu"
+                  style={{ animationDelay: `${index * 100}ms` }}
                   data-testid={`tech-icon-${tech.name.toLowerCase().replace('.', '-')}`}
                 >
-                  <i className={`${tech.icon} text-4xl text-muted-foreground group-hover:text-${tech.color} transition-colors`} />
+                  <div className={`
+                    relative p-4 rounded-xl bg-card/30 border border-border/50
+                    group-hover:bg-${tech.color}/10 group-hover:border-${tech.color}/50
+                    group-hover:shadow-lg group-hover:shadow-${tech.color}/20
+                    transition-all duration-500 ease-out
+                    animate-float
+                  `}>
+                    <tech.icon 
+                      className={`
+                        h-8 w-8 text-muted-foreground 
+                        group-hover:text-${tech.color} 
+                        transition-all duration-500 ease-out
+                        group-hover:drop-shadow-[0_0_8px_var(--${tech.color})]
+                      `} 
+                    />
+                    <div className={`
+                      absolute inset-0 rounded-xl opacity-0 
+                      group-hover:opacity-100 transition-opacity duration-500
+                      bg-gradient-to-t from-${tech.color}/5 to-transparent
+                    `} />
+                  </div>
+                  <span className={`
+                    block text-xs font-mono mt-2 text-center
+                    text-muted-foreground group-hover:text-${tech.color}
+                    transition-colors duration-300 opacity-0 group-hover:opacity-100
+                  `}>
+                    {tech.name}
+                  </span>
                 </div>
               ))}
             </div>

@@ -223,6 +223,27 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .tech-icon {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tech-icon:hover {
+    z-index: 10;
+  }
+
+  .tech-icon:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
+
+  .tech-icon:nth-child(even) {
+    animation-delay: 1s;
+  }
+
   .particle-canvas {
     position: fixed;
     top: 0;
@@ -277,6 +298,11 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--primary); }
+  50% { box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary); }
 }
 
 @media (max-width: 768px) {
