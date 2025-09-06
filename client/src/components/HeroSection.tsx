@@ -2,7 +2,7 @@ import { Download, Rocket } from "lucide-react";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 export default function HeroSection() {
-  const typewriterText = useTypewriter('console.log("Hello World");', 150, 1000);
+  const typewriterText = useTypewriter('console.log("Portfolio");', 150, 1000);
 
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
@@ -32,11 +32,11 @@ export default function HeroSection() {
             data-text="Neural Dev"
             data-testid="hero-title"
           >
-            Neural Dev
+            Vinay Datta
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 floating" data-testid="hero-subtitle">
-            Full Stack Developer & AI Enthusiast
+            Python Developer & Frontend Developer
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
