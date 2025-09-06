@@ -17,8 +17,7 @@ export default function AboutSection() {
               
               <div className="pl-4">
                 <p className="text-lg leading-relaxed mb-6" data-testid="about-description-1">
-                  I’m a Python and Frontend Developer obsessed with clean code, performance tuning, and building interfaces that don’t just look good but compile well with user experience. 
-                  I enjoy dissecting problems into algorithms, optimizing DOM rendering, and making backend logic talk to the frontend as efficiently as possible. 
+                  I’m a Python and Frontend Developer obsessed with clean code, performance tuning, and building interfaces that don’t just look good but compile well with user experience.
                   My idea of fun is debugging until 2 AM, refactoring functions for elegance, and experimenting with new frameworks just to squeeze out a few milliseconds of speed.
                 </p>
                 
