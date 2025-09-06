@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Github, Twitter, Send, Loader2 } from "lucide-react";
+import { Mail, Linkedin, Github, SquareChevronRight, Send, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -23,29 +23,29 @@ const contactInfo = [
   {
     icon: Mail,
     label: "email",
-    value: "neural.dev@example.com",
-    href: "mailto:neural.dev@example.com",
+    value: "vinaydattarao@gmail.com",
+    href: "mailto:vinaydattarao@gmail.com",
     color: "primary"
   },
   {
     icon: Linkedin,
     label: "linkedin",
-    value: "/in/neural-dev",
-    href: "https://linkedin.com/in/neural-dev",
+    value: "/in/vinay-datta",
+    href: "https://www.linkedin.com/in/vinay-datta-rao-gandra-2a32612a5/",
     color: "secondary"
   },
   {
     icon: Github,
     label: "github",
-    value: "@neural-dev",
-    href: "https://github.com/neural-dev",
+    value: "@vinaydattarao",
+    href: "https://github.com/VinayDattarao",
     color: "accent"
   },
   {
-    icon: Twitter,
-    label: "twitter",
-    value: "@neural_dev",
-    href: "https://twitter.com/neural_dev",
+    icon: SquareChevronRight,
+    label: "hackerrank",
+    value: "@vinay_datta",
+    href: "https://www.hackerrank.com/profile/vinaydattarao",
     color: "primary"
   }
 ];
