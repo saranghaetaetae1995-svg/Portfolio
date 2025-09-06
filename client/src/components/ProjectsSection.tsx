@@ -65,7 +65,7 @@ export default function ProjectsSection() {
             {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className="project-card glow-border rounded-lg bg-card/50 overflow-hidden group animate-float"
+                className="project-card glow-border rounded-lg glass-card overflow-hidden group animate-float"
                 style={{ animationDelay: `${index * 0.5}s` }}
                 data-testid={`project-card-${project.id}`}
               >
