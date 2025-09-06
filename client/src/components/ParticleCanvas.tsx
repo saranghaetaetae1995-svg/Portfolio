@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Particle {
   x: number;
@@ -14,6 +14,7 @@ export default function ParticleCanvas() {
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const [isBlurred, setIsBlurred] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -106,6 +107,21 @@ export default function ParticleCanvas() {
       mouseRef.current.y = e.clientY;
     };
 
+    const handleScroll = () => {
+      const projectsSection = document.getElementById('projects');
+      const contactSection = document.getElementById('contact');
+      
+      if (projectsSection && contactSection) {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        const projectsTop = projectsSection.offsetTop;
+        const contactBottom = contactSection.offsetTop + contactSection.offsetHeight;
+        
+        // Blur when scrolled to projects section until end of contact section
+        const shouldBlur = scrollPosition >= projectsTop && scrollPosition <= contactBottom;
+        setIsBlurred(shouldBlur);
+      }
+    };
+
     // Initialize
     resize();
     createParticles();
@@ -114,6 +130,7 @@ export default function ParticleCanvas() {
     // Event listeners
     window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       if (animationRef.current) {
@@ -121,13 +138,14 @@ export default function ParticleCanvas() {
       }
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="particle-canvas"
+      className={`particle-canvas ${isBlurred ? 'blurred' : ''}`}
       data-testid="particle-canvas"
     />
   );
