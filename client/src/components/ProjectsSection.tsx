@@ -136,7 +136,7 @@ export default function ProjectsSection() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="flex justify-center mt-12">
             <button 
               className="neon-button font-mono text-lg px-8 py-3 animate-float flex items-center justify-center"
               style={{ animationDelay: "3s" }}
