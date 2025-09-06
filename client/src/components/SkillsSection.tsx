@@ -8,10 +8,9 @@ const skillCategories = [
     icon: Code,
     color: "primary",
     skills: [
-      { name: "React.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "Vue.js", level: 82 },
+      { name: "Html", level: 100 },
+      { name: "Css", level: 60 },
+      { name: "Javascript", level: 70 },
     ]
   },
   {
@@ -19,10 +18,10 @@ const skillCategories = [
     icon: Server,
     color: "secondary",
     skills: [
-      { name: "Node.js", level: 93 },
-      { name: "Python", level: 91 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "GraphQL", level: 80 },
+      { name: "Python", level: 100 },
+      { name: "MongoDB", level: 100 },
+      { name: "SQL", level: 100 },
+      { name: "Django", level: 70 },
     ]
   },
   {
@@ -30,10 +29,10 @@ const skillCategories = [
     icon: Gavel,
     color: "accent",
     skills: [
-      { name: "Docker", level: 89 },
-      { name: "AWS", level: 87 },
-      { name: "Kubernetes", level: 78 },
-      { name: "CI/CD", level: 84 },
+      { name: "Git / Github", level: 90 },
+      { name: "Jenkins", level: 70 },
+      { name: "Docker", level: 60 },
+      { name: "Kubernetes", level: 40 },
     ]
   }
 ];
