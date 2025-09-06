@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Code, Server, Gavel, Database, Globe, GitBranch, Palette, Cpu, Cloud, Container, Box, Smartphone } from "lucide-react";
+import { Code, Server, Gavel, Database, Globe, GitBranch, Palette, Cpu, Cloud, Container, Box, Smartphone, FileCode, Layers, Wrench, Zap, FileText, Monitor } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const skillCategories = [
@@ -38,18 +38,19 @@ const skillCategories = [
 ];
 
 const techIcons = [
-  { name: "React", icon: Code, color: "primary" },
-  { name: "Python", icon: Cpu, color: "secondary" },
-  { name: "Node.js", icon: Server, color: "accent" },
+  { name: "HTML", icon: FileCode, color: "primary" },
+  { name: "CSS", icon: Palette, color: "secondary" },
+  { name: "Javascript", icon: Code, color: "accent" },
+  { name: "Python", icon: Cpu, color: "primary" },
+  { name: "MongoDB", icon: Database, color: "secondary" },
+  { name: "SQL", icon: Database, color: "accent" },
+  { name: "Django", icon: Server, color: "primary" },
+  { name: "Git/Github", icon: GitBranch, color: "secondary" },
+  { name: "Jenkins", icon: Wrench, color: "accent" },
   { name: "Docker", icon: Container, color: "primary" },
-  { name: "AWS", icon: Cloud, color: "secondary" },
-  { name: "Git", icon: GitBranch, color: "accent" },
-  { name: "Figma", icon: Palette, color: "primary" },
-  { name: "Database", icon: Database, color: "secondary" },
-  { name: "TypeScript", icon: Box, color: "accent" },
-  { name: "Mobile", icon: Smartphone, color: "primary" },
-  { name: "Web", icon: Globe, color: "secondary" },
-  { name: "DevOps", icon: Gavel, color: "accent" },
+  { name: "Kubernetes", icon: Box, color: "secondary" },
+  { name: "VS Code", icon: Monitor, color: "accent" },
+  { name: "PyCharm", icon: FileText, color: "primary" },
 ];
 
 export default function SkillsSection() {
@@ -102,7 +103,7 @@ export default function SkillsSection() {
               my_tech_stack = [
             </h3>
             
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 items-center justify-items-center">
               {techIcons.map((tech, index) => (
                 <div 
                   key={tech.name}
