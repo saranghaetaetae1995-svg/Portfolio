@@ -12,8 +12,7 @@ export default function HeroSection() {
   };
 
   const downloadResume = () => {
-    // In a real implementation, this would download the actual resume
-    console.log('Downloading resume...');
+    window.open('https://drive.google.com/uc?export=download&id=1hC1ZuhwzILOVwW9_Njb2DqCPHUhQqUJu', '_blank');
   };
 
   return (
