@@ -27,8 +27,7 @@ export default function HeroSection() {
           </div>
           
           <h1 
-            className="text-5xl md:text-7xl font-bold mb-6 glitch" 
-            data-text="Neural Dev"
+            className="text-5xl md:text-7xl font-bold mb-6" 
             data-testid="hero-title"
           >
             Vinay Datta
