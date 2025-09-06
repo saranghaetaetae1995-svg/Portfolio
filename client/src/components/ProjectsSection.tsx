@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "Employee Management System",
     description: "Designed a GUI to handle employee records, attendance, salaries, and departmental data.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    image: "https://images.pexels.com/photos/33797203/pexels-photo-33797203.jpeg",
     technologies: ["Python", "SQLite", "Tkinter"],
     exploreUrl: "https://github.com/VinayDattarao/Employee-Management-System"
   },
@@ -22,7 +22,7 @@ const projects = [
     id: 3,
     title: "MP3 Music Player",
     description: "Designed a fully functional MP3 Music Player using Python and Tkinter GUI framework.",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    image: "https://images.pexels.com/photos/33797217/pexels-photo-33797217.png",
     technologies: ["Python", "Tkinter"],
     exploreUrl: "https://github.com/VinayDattarao/Python-Projects/tree/main/Mp3%20Player"
   }
