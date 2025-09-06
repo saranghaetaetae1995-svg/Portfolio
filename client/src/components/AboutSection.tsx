@@ -17,24 +17,27 @@ export default function AboutSection() {
               
               <div className="pl-4">
                 <p className="text-lg leading-relaxed mb-6" data-testid="about-description-1">
-                  I'm a passionate full-stack developer with a deep love for creating innovative digital experiences. 
-                  My journey in tech began with curiosity and has evolved into expertise across multiple domains.
+                  I’m a Python and Frontend Developer obsessed with clean code, performance tuning, and building interfaces that don’t just look good but compile well with user experience. 
+                  I enjoy dissecting problems into algorithms, optimizing DOM rendering, and making backend logic talk to the frontend as efficiently as possible. 
+                  My idea of fun is debugging until 2 AM, refactoring functions for elegance, and experimenting with new frameworks just to squeeze out a few milliseconds of speed.
                 </p>
                 
                 <p className="text-lg leading-relaxed mb-6" data-testid="about-description-2">
-                  When I'm not coding, you'll find me exploring the latest in AI/ML, contributing to open source projects, 
-                  or diving deep into cybersecurity research. I believe in writing clean, efficient code that makes a difference.
+                  When I’m not coding, I’m usually geeking out over tech that makes humans lazier in a good way. 
+                  From testing quirky Linux distros to messing with editing tools and random utilities, 
+                  I love tinkering with anything that automates, optimizes, or just looks cool enough to break 
+                  first and master later. For me, exploring new tech isn’t a hobby it’s basically a reflex.
                 </p>
                 
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3" data-testid="about-location">
                     <MapPin className="text-primary h-5 w-5" />
-                    <span>San Francisco, CA</span>
+                    <span>Hyderabad, India</span>
                   </div>
                   
                   <div className="flex items-center space-x-3" data-testid="about-education">
                     <GraduationCap className="text-secondary h-5 w-5" />
-                    <span>Computer Science, Stanford University</span>
+                    <span>Computer Science, Sree Dattha Institute of Engineering and Science</span>
                   </div>
                   
                   <div className="flex items-center space-x-3" data-testid="about-coffee">
@@ -53,18 +56,18 @@ export default function AboutSection() {
               <div className="glow-border rounded-lg p-8 bg-card/50" data-testid="about-stats">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-primary" data-testid="stat-experience">5+</div>
+                    <div className="text-3xl font-bold text-primary" data-testid="stat-experience">3</div>
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">100+</div>
+                    <div className="text-3xl font-bold text-secondary" data-testid="stat-projects">3</div>
                     <div className="text-sm text-muted-foreground">Projects Completed</div>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-accent" data-testid="stat-clients">50+</div>
-                    <div className="text-sm text-muted-foreground">Happy Clients</div>
+                    <div className="text-3xl font-bold text-accent" data-testid="stat-clients">40+</div>
+                    <div className="text-sm text-muted-foreground">Leetcode Problems</div>
                   </div>
                   
                   <div className="space-y-2">
