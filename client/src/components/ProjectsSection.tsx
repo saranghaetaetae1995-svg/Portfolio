@@ -90,10 +90,11 @@ export default function ProjectsSection() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className="project-card glow-border rounded-lg bg-card/50 overflow-hidden group"
+                className="project-card glow-border rounded-lg bg-card/50 overflow-hidden group animate-float"
+                style={{ animationDelay: `${index * 0.5}s` }}
                 data-testid={`project-card-${project.id}`}
               >
                 <img 
@@ -156,7 +157,8 @@ export default function ProjectsSection() {
 
           <div className="text-center mt-12">
             <button 
-              className="neon-button font-mono text-lg px-8 py-3"
+              className="neon-button font-mono text-lg px-8 py-3 animate-float"
+              style={{ animationDelay: "3s" }}
               onClick={viewAllRepositories}
               data-testid="button-view-all-repositories"
             >
