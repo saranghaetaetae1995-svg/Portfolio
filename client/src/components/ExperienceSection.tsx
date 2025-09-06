@@ -4,28 +4,19 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 const experiences = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
-    company: "Neural Tech Solutions",
-    period: "2022 - Present",
-    description: "Led development of AI-powered enterprise applications serving 100K+ users. Architected microservices infrastructure that improved system performance by 300%.",
-    technologies: ["React", "Node.js", "AWS", "Docker"],
+    title: "Django Intern",
+    company: "Perpex",
+    period: "Aug 2025 - Present",
+    description: "Actively developing dynamic web applications utilizing Python and Django, contributing to ongoing real-worldprojects.",
+    technologies: ["Python", "Django", "Git"],
     color: "primary"
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "CyberSpace Innovations",
-    period: "2020 - 2022",
-    description: "Developed responsive web applications with focus on performance optimization. Implemented cutting-edge UI/UX designs that increased user engagement by 150%.",
-    technologies: ["Vue.js", "TypeScript", "GraphQL", "Figma"],
-    color: "secondary"
-  },
-  {
-    id: 3,
-    title: "Software Engineer Intern",
-    company: "Quantum Labs",
-    period: "2019 - 2020",
-    description: "Contributed to machine learning research projects and developed data visualization tools. Implemented algorithms that improved model accuracy by 25%.",
+    title: "Front End Web Development Intern",
+    company: "IBM",
+    period: "Sep 2025 - Present",
+    description: "Currently building responsive web interfaces using HTML, CSS, and JavaScript, applying concepts learned throughtheIBM SkillsBuild platform.",
     technologies: ["Python", "TensorFlow", "Jupyter", "Pandas"],
     color: "accent"
   }
