@@ -36,7 +36,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 floating" data-testid="hero-subtitle">
-            Python Developer & Frontend Developer
+            Python & Frontend Developer
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
