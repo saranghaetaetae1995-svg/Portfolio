@@ -3,58 +3,26 @@ import { Github, ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "AI Neural Visualizer",
-    description: "Interactive 3D visualization of neural networks with real-time training data and performance metrics.",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Three.js", "Python", "TensorFlow"],
-    githubUrl: "#",
-    liveUrl: "#"
+    title: "X-Plore India 1.0",
+    description: "Designed and developed a responsive travel guide website for users across India.",
+    image: "https://drive.google.com/file/d/1VzPdCMFqfVeE7ugzwBjDxOCshczQcTC3/view?usp=sharing",
+    technologies: ["Html", "Css", "Javascript", "SQL"],
+    liveUrl: "https://vinaydattarao.github.io/X-Plore-India/"
   },
   {
     id: 2,
-    title: "DeFi Trading Platform",
-    description: "Decentralized trading platform with smart contracts, yield farming, and advanced analytics dashboard.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Solidity", "React", "Web3"],
-    githubUrl: "#",
-    liveUrl: "#"
+    title: "Employee Management System",
+    description: "Designed a Gui to handle employee records, attendance, salaries, and departmental data.",
+    image: "https://drive.google.com/file/d/1vPcuwXR7OUrLFn2b-d5rfqHyJTWZXGuq/view?usp=sharing",
+    technologies: ["Python", "SQL-lite", "Tkinter"],
   },
   {
     id: 3,
-    title: "SecOps Dashboard",
-    description: "Real-time cybersecurity monitoring dashboard with threat intelligence and incident response automation.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Python", "D3.js", "ElasticSearch"],
-    githubUrl: "#",
-    liveUrl: "#"
+    title: "MP3 Music Player",
+    description: "Designed a fully functional MP3 Music Player using Python and Tkinter GUI framework.",
+    image: "https://drive.google.com/file/d/1qZZy0iIRlNESX9k8CXFiefe9G8glLSox/view?usp=sharing",
+    technologies: ["Python", "Tkinter"],
   },
-  {
-    id: 4,
-    title: "IoT Home Hub",
-    description: "Comprehensive IoT platform for smart home automation with ML-powered energy optimization.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Arduino", "Node.js", "MQTT"],
-    githubUrl: "#",
-    liveUrl: "#"
-  },
-  {
-    id: 5,
-    title: "Quantum Simulator",
-    description: "Educational quantum computing simulator with interactive quantum circuit builder and visualization.",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Qiskit", "Python", "WebGL"],
-    githubUrl: "#",
-    liveUrl: "#"
-  },
-  {
-    id: 6,
-    title: "MetaVerse Platform",
-    description: "Immersive VR/AR platform for virtual collaboration with spatial computing and haptic feedback.",
-    image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    technologies: ["Unity", "C#", "WebXR"],
-    githubUrl: "#",
-    liveUrl: "#"
-  }
 ];
 
 const techColors: { [key: string]: string } = {
