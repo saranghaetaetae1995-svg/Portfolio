@@ -5,48 +5,52 @@ const projects = [
     id: 1,
     title: "X-Plore India 1.0",
     description: "Designed and developed a responsive travel guide website for users across India.",
-    image: "https://www.pexels.com/photo/33797056/",
-    technologies: ["Html", "Css", "Javascript", "SQL"],
-    liveUrl: "https://vinaydattarao.github.io/X-Plore-India/"
+    image: "https://images.pexels.com/photos/33797056/pexels-photo-33797056.jpeg",
+    technologies: ["HTML", "CSS", "Javascript", "SQL"],
+    liveUrl: "https://vinaydattarao.github.io/X-Plore-India/",
+    exploreUrl: "https://github.com/VinayDattarao/X-Plore-India"
   },
   {
     id: 2,
     title: "Employee Management System",
-    description: "Designed a Gui to handle employee records, attendance, salaries, and departmental data.",
-    image: "https://drive.google.com/file/d/1vPcuwXR7OUrLFn2b-d5rfqHyJTWZXGuq/view?usp=sharing",
-    technologies: ["Python", "SQL-lite", "Tkinter"],
+    description: "Designed a GUI to handle employee records, attendance, salaries, and departmental data.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    technologies: ["Python", "SQLite", "Tkinter"],
+    exploreUrl: "https://github.com/VinayDattarao/Employee-Management-System"
   },
   {
     id: 3,
     title: "MP3 Music Player",
     description: "Designed a fully functional MP3 Music Player using Python and Tkinter GUI framework.",
-    image: "https://drive.google.com/file/d/1qZZy0iIRlNESX9k8CXFiefe9G8glLSox/view?usp=sharing",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     technologies: ["Python", "Tkinter"],
-  },
+    exploreUrl: "https://github.com/VinayDattarao/Python-Projects/tree/main/Mp3%20Player"
+  }
 ];
 
 const techColors: { [key: string]: string } = {
-  "Three.js": "primary",
+  "HTML": "primary",
+  "CSS": "secondary", 
+  "Javascript": "accent",
   "Python": "secondary",
-  "TensorFlow": "accent",
-  "Solidity": "primary",
-  "React": "secondary",
-  "Web3": "accent",
-  "D3.js": "secondary",
-  "ElasticSearch": "accent",
-  "Arduino": "primary",
-  "Node.js": "secondary",
-  "MQTT": "accent",
-  "Qiskit": "primary",
-  "WebGL": "accent",
-  "Unity": "primary",
-  "C#": "secondary",
-  "WebXR": "accent"
+  "SQL": "accent",
+  "SQLite": "primary",
+  "Tkinter": "secondary"
 };
 
 export default function ProjectsSection() {
   const viewAllRepositories = () => {
-    window.open("https://github.com", "_blank");
+    window.open("https://github.com/VinayDattarao", "_blank");
+  };
+
+  const handleExploreProject = (project: any) => {
+    if (project.exploreUrl) {
+      window.open(project.exploreUrl, '_blank');
+    } else if (project.liveUrl) {
+      window.open(project.liveUrl, '_blank');
+    } else if (project.githubUrl) {
+      window.open(project.githubUrl, '_blank');
+    }
   };
 
   return (
@@ -79,20 +83,28 @@ export default function ProjectsSection() {
                     </h3>
                     
                     <div className="flex space-x-2">
-                      <a 
-                        href={project.githubUrl}
-                        className="text-primary hover:text-secondary transition-colors"
-                        data-testid={`project-github-${project.id}`}
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                      <a 
-                        href={project.liveUrl}
-                        className="text-primary hover:text-secondary transition-colors"
-                        data-testid={`project-live-${project.id}`}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
+                      {project.githubUrl && (
+                        <a 
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-secondary transition-colors"
+                          data-testid={`project-github-${project.id}`}
+                        >
+                          <Github className="h-5 w-5" />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a 
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-secondary transition-colors"
+                          data-testid={`project-live-${project.id}`}
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                   
@@ -114,6 +126,7 @@ export default function ProjectsSection() {
                   
                   <button 
                     className="w-full neon-button text-sm font-mono"
+                    onClick={() => handleExploreProject(project)}
                     data-testid={`project-explore-${project.id}`}
                   >
                     explore_project()
