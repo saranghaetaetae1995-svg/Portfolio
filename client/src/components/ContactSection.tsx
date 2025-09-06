@@ -212,7 +212,7 @@ export default function ContactSection() {
                   <button 
                     type="submit"
                     disabled={contactMutation.isPending}
-                    className="w-full neon-button font-mono"
+                    className="w-full neon-button font-mono flex items-center justify-center"
                     data-testid="button-send-message"
                   >
                     {contactMutation.isPending ? (
