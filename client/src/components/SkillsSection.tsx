@@ -106,33 +106,22 @@ export default function SkillsSection() {
               {techIcons.map((tech, index) => (
                 <div 
                   key={tech.name}
-                  className="tech-icon group cursor-pointer transition-all duration-500 hover:scale-125 hover:rotate-6 transform-gpu"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="tech-icon group cursor-pointer transition-all duration-300 hover:scale-110 transform-gpu"
                   data-testid={`tech-icon-${tech.name.toLowerCase().replace('.', '-')}`}
                 >
-                  <div className={`
-                    relative p-4 rounded-xl bg-card/30 border border-border/50
-                    group-hover:bg-${tech.color}/10 group-hover:border-${tech.color}/50
-                    group-hover:shadow-lg group-hover:shadow-${tech.color}/20
-                    transition-all duration-500 ease-out
-                    animate-float
-                  `}>
+                  <div className="tech-icon-container">
                     <tech.icon 
                       className={`
-                        h-8 w-8 text-muted-foreground 
-                        group-hover:text-${tech.color} 
-                        transition-all duration-500 ease-out
-                        group-hover:drop-shadow-[0_0_8px_var(--${tech.color})]
+                        h-10 w-10 text-${tech.color}
+                        transition-all duration-300 ease-out
+                        group-hover:scale-125
+                        group-hover:drop-shadow-[0_0_12px_var(--${tech.color})]
+                        filter group-hover:brightness-125
                       `} 
                     />
-                    <div className={`
-                      absolute inset-0 rounded-xl opacity-0 
-                      group-hover:opacity-100 transition-opacity duration-500
-                      bg-gradient-to-t from-${tech.color}/5 to-transparent
-                    `} />
                   </div>
                   <span className={`
-                    block text-xs font-mono mt-2 text-center
+                    block text-xs font-mono mt-3 text-center
                     text-muted-foreground group-hover:text-${tech.color}
                     transition-colors duration-300 opacity-0 group-hover:opacity-100
                   `}>

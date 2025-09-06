@@ -224,24 +224,20 @@
   }
 
   .animate-float {
-    animation: float 4s ease-in-out infinite;
+    animation: gentle-float 8s ease-in-out infinite;
   }
 
   .tech-icon {
     position: relative;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .tech-icon:hover {
     z-index: 10;
   }
 
-  .tech-icon:nth-child(odd) {
-    animation-delay: 0.5s;
-  }
-
-  .tech-icon:nth-child(even) {
-    animation-delay: 1s;
+  .tech-icon-container {
+    animation: gentle-float 8s ease-in-out infinite;
   }
 
   .particle-canvas {
@@ -298,6 +294,11 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes pulse-glow {
