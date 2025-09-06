@@ -138,13 +138,13 @@ export default function ProjectsSection() {
 
           <div className="text-center mt-12">
             <button 
-              className="neon-button font-mono text-lg px-8 py-3 animate-float"
+              className="neon-button font-mono text-lg px-8 py-3 animate-float flex items-center justify-center"
               style={{ animationDelay: "3s" }}
               onClick={viewAllRepositories}
               data-testid="button-view-all-repositories"
             >
               <Github className="mr-2 h-5 w-5" />
-              view_all_repositories()
+              All_Repositories()
             </button>
           </div>
         </div>
