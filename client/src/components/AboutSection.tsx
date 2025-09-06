@@ -1,4 +1,4 @@
-import { MapPin, GraduationCap, Coffee } from "lucide-react";
+import { MapPin, GraduationCap, Linkedin } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -40,8 +40,8 @@ export default function AboutSection() {
                   </div>
                   
                   <div className="flex items-center space-x-3" data-testid="about-coffee">
-                    <Coffee className="text-accent h-5 w-5" />
-                    <span className="font-mono">Coffee.getInstance().drink()</span>
+                    <Linkedin className="text-accent h-5 w-5" />
+                    <span className="font-mono">Vinay Datta</span>
                   </div>
                 </div>
               </div>
