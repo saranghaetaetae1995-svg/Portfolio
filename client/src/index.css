@@ -5,24 +5,24 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(240, 10%, 4%);
+  --background: hsla(240, 10%, 4%, 0.7);
   --foreground: hsl(240, 10%, 90%);
-  --card: hsl(240, 10%, 8%);
+  --card: hsla(240, 10%, 8%, 0.6);
   --card-foreground: hsl(240, 10%, 90%);
-  --popover: hsl(240, 10%, 8%);
+  --popover: hsla(240, 10%, 8%, 0.8);
   --popover-foreground: hsl(240, 10%, 90%);
   --primary: hsl(185, 100%, 50%);
   --primary-foreground: hsl(240, 10%, 4%);
   --secondary: hsl(103, 100%, 53%);
   --secondary-foreground: hsl(240, 10%, 4%);
-  --muted: hsl(240, 10%, 15%);
+  --muted: hsla(240, 10%, 15%, 0.6);
   --muted-foreground: hsl(240, 10%, 65%);
   --accent: hsl(285, 100%, 50%);
   --accent-foreground: hsl(240, 10%, 90%);
   --destructive: hsl(356, 90%, 54%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(240, 10%, 18%);
-  --input: hsl(240, 10%, 18%);
+  --border: hsla(240, 10%, 18%, 0.5);
+  --input: hsla(240, 10%, 18%, 0.7);
   --ring: hsl(185, 100%, 50%);
   --chart-1: hsl(185, 100%, 50%);
   --chart-2: hsl(103, 100%, 53%);
@@ -54,14 +54,14 @@
   --primary-foreground: hsl(240, 10%, 4%);
   --secondary: hsl(103, 100%, 53%);
   --secondary-foreground: hsl(240, 10%, 4%);
-  --muted: hsl(240, 10%, 15%);
+  --muted: hsla(240, 10%, 15%, 0.6);
   --muted-foreground: hsl(240, 10%, 65%);
   --accent: hsl(285, 100%, 50%);
   --accent-foreground: hsl(240, 10%, 90%);
   --destructive: hsl(356, 90%, 54%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(240, 10%, 18%);
-  --input: hsl(240, 10%, 18%);
+  --border: hsla(240, 10%, 18%, 0.5);
+  --input: hsla(240, 10%, 18%, 0.7);
   --ring: hsl(185, 100%, 50%);
 }
 
@@ -81,6 +81,27 @@
 }
 
 @layer components {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
   .glow-text {
     text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
   }
