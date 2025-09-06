@@ -52,7 +52,7 @@ export default function AboutSection() {
             </div>
             
             <div className="relative">
-              <div className="glow-border rounded-lg p-8 bg-card/50" data-testid="about-stats">
+              <div className="glow-border rounded-lg p-8 glass-card" data-testid="about-stats">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div className="space-y-2">
                     <div className="text-3xl font-bold text-primary" data-testid="stat-experience">3</div>
