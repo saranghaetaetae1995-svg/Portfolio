@@ -101,7 +101,7 @@ export default function ContactSection() {
                   let's_connect() {'{'}
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6" data-testid="contact-description">
-                  Ready to collaborate on something amazing? Whether it's a cutting-edge project or just a chat about tech, 
+                  Ready to collaborate on something amazing? , 
                   I'm always excited to connect with fellow developers and innovators.
                 </p>
                 <div className="font-mono text-muted-foreground">{'}'}</div>
