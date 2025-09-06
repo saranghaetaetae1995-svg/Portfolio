@@ -17,7 +17,7 @@ const experiences = [
     company: "IBM",
     period: "Sep 2025 - Present",
     description: "Currently building responsive web interfaces using HTML, CSS, and JavaScript, applying concepts learned throughtheIBM SkillsBuild platform.",
-    technologies: ["Python", "TensorFlow", "Jupyter", "Pandas"],
+    technologies: ["Html", "Css", "Javascript"],
     color: "accent"
   }
 ];
