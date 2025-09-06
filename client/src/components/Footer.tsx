@@ -1,10 +1,8 @@
-import { Github, Linkedin, Twitter, Rss } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Rss, href: "#", label: "RSS Feed" },
+  { icon: Github, href: "https://github.com/VinayDattarao", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/vinay-datta-rao-gandra-2a32612a5/", label: "LinkedIn" },
 ];
 
 export default function Footer() {
@@ -15,7 +13,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="font-mono text-muted-foreground text-sm" data-testid="footer-copyright">
-            © {currentYear} Neural Dev. Crafted with ❤️ and lots of ☕
+            © {currentYear} Vinay Datta. Crafted with lots of ❤️
           </div>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
